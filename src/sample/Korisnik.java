@@ -78,4 +78,9 @@ public class Korisnik {
     public void setLozinka(String lozinka) {
         this.lozinka.set(lozinka);
     }
+
+    @Override
+    public String toString() {
+        return this.ime+" "+this.prezime;
+    }
 }

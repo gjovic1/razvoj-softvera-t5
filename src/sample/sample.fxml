@@ -10,7 +10,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="311.0" prefWidth="489.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <ListView layoutX="14.0" layoutY="40.0" prefHeight="186.0" prefWidth="199.0" />
+      <ListView fx:id="userList" layoutX="14.0" layoutY="40.0" prefHeight="186.0" prefWidth="199.0" />
       <TextField fx:id="imeField" layoutX="304.0" layoutY="40.0" />
       <TextField fx:id="prezField" layoutX="304.0" layoutY="79.0" />
       <TextField fx:id="emailField" layoutX="304.0" layoutY="120.0" />
@@ -37,10 +37,10 @@
          </font>
       </Label>
       <Label layoutX="227.0" layoutY="205.0" text="Lozinka:" />
-      <ButtonBar layoutX="269.0" layoutY="243.0" prefHeight="40.0" prefWidth="200.0">
+      <ButtonBar fx:id="dugmici" layoutX="269.0" layoutY="243.0" prefHeight="40.0" prefWidth="200.0">
         <buttons>
-          <Button mnemonicParsing="false" text="Dodaj" />
-            <Button mnemonicParsing="false" text="Kraj" />
+          <Button mnemonicParsing="false" onAction="#dodajUsera" text="Dodaj" />
+            <Button mnemonicParsing="false" onAction="#endProg" text="Kraj" />
         </buttons>
       </ButtonBar>
    </children>
