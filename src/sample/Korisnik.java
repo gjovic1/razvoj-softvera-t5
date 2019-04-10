@@ -9,16 +9,15 @@ public class Korisnik {
     private SimpleStringProperty username = new SimpleStringProperty("");
     private SimpleStringProperty lozinka = new SimpleStringProperty("");
 
-    public Korisnik(){}
-
     public Korisnik(String ime, String prezime, String email, String username, String lozinka)
     {
-        this.ime=new SimpleStringProperty(ime);
-        this.prezime=new SimpleStringProperty(prezime);
-        this.email=new SimpleStringProperty(email);
-        this.username=new SimpleStringProperty(username);
-        this.lozinka=new SimpleStringProperty(lozinka);
+        this.ime = new SimpleStringProperty(ime);
+        this.prezime = new SimpleStringProperty(prezime);
+        this.email = new SimpleStringProperty(email);
+        this.username = new SimpleStringProperty(username);
+        this.lozinka = new SimpleStringProperty(lozinka);
     }
+
 
     public String getIme() {
         return ime.get();
