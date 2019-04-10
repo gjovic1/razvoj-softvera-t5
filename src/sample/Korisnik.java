@@ -81,6 +81,6 @@ public class Korisnik {
 
     @Override
     public String toString() {
-        return this.ime+" "+this.prezime;
+        return ime.get() + " " + prezime.get();
     }
 }

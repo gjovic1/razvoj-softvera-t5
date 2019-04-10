@@ -25,6 +25,7 @@ public class Controller {
     public void initialize(){
 
         model.napuni();
+        model.setTrenutniKorisnik(new Korisnik("David", "Davidson", "ddav@etf.unsa.ba", "davey231", "daveknows"));
 
         imeField.textProperty().bindBidirectional(model.getTrenutniKorisnik().imeProperty());
         prezField.textProperty().bindBidirectional(model.getTrenutniKorisnik().prezimeProperty());
@@ -34,7 +35,18 @@ public class Controller {
 
         userList.setItems(model.getKorisnici());
 
-        userList.getSelectionModel().selectedItemProperty().addListener((ChangeListener<Korisnik>) (observableValue, korisnik, t1) -> model.setTrenutniKorisnik(t1));
+        userList.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Korisnik>() {
+            @Override
+            public void changed(ObservableValue<? extends Korisnik> observableValue, Korisnik korisnik, Korisnik t1) {
+                imeField.textProperty().bindBidirectional(model.getTrenutniKorisnik().imeProperty());
+                prezField.textProperty().bindBidirectional(model.getTrenutniKorisnik().prezimeProperty());
+                emailField.textProperty().bindBidirectional(model.getTrenutniKorisnik().emailProperty());
+                usernField.textProperty().bindBidirectional(model.getTrenutniKorisnik().usernameProperty());
+                passField.textProperty().bindBidirectional(model.getTrenutniKorisnik().lozinkaProperty());
+                model.setTrenutniKorisnik(t1);
+            }
+        });
+
 
 
     }
