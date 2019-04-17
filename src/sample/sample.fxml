@@ -39,8 +39,8 @@
       <Label layoutX="227.0" layoutY="205.0" text="Lozinka:" />
       <ButtonBar fx:id="dugmici" layoutX="269.0" layoutY="243.0" prefHeight="40.0" prefWidth="200.0">
         <buttons>
-          <Button mnemonicParsing="false" onAction="#dodajUsera" text="Dodaj" />
-            <Button mnemonicParsing="false" onAction="#endProg" text="Kraj" />
+          <Button fx:id="dodajBtn" mnemonicParsing="false" onAction="#dodajUsera" text="Dodaj" />
+            <Button fx:id="krajBtn" mnemonicParsing="false" onAction="#endProg" text="Kraj" />
         </buttons>
       </ButtonBar>
    </children>
