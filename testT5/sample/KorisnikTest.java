@@ -27,6 +27,9 @@ class KorisnikTest {
 
     @Test
     void prezimeProperty() {
+        Korisnik k = new Korisnik();
+        k.setPrezime("Karovic");
+        assertEquals("Karovic", k.prezimeProperty());
     }
 
     @Test
@@ -39,6 +42,9 @@ class KorisnikTest {
 
     @Test
     void emailProperty() {
+        Korisnik k = new Korisnik();
+        k.setEmail("bkarovic1@etf.unsa.ba");
+        assertEquals("bkarovic1@etf.unsa.ba", k.emailProperty());
     }
 
     @Test
@@ -51,6 +57,9 @@ class KorisnikTest {
 
     @Test
     void usernameProperty() {
+        Korisnik k = new Korisnik();
+        k.setUsername("bake");
+        assertEquals("bake", k.usernameProperty());
     }
 
     @Test
@@ -63,6 +72,9 @@ class KorisnikTest {
 
     @Test
     void lozinkaProperty() {
+        Korisnik k = new Korisnik();
+        k.setLozinka("staktrekfan123");
+        assertEquals("startrek123", k.lozinkaProperty());
     }
 
     @Test

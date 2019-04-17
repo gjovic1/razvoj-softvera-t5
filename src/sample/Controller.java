@@ -37,7 +37,7 @@ public class Controller {
                 model.setTrenutniKorisnik(t1);
             }
         });
-        
+
     }
     public void dodajUsera(ActionEvent actionEvent) {
 
