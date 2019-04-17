@@ -24,15 +24,6 @@ public class Controller {
     @FXML
     public void initialize(){
 
-        model.napuni();
-        model.setTrenutniKorisnik(new Korisnik("David", "Davidson", "ddav@etf.unsa.ba", "davey231", "daveknows"));
-
-        imeField.textProperty().bindBidirectional(model.getTrenutniKorisnik().imeProperty());
-        prezField.textProperty().bindBidirectional(model.getTrenutniKorisnik().prezimeProperty());
-        emailField.textProperty().bindBidirectional(model.getTrenutniKorisnik().emailProperty());
-        usernField.textProperty().bindBidirectional(model.getTrenutniKorisnik().usernameProperty());
-        passField.textProperty().bindBidirectional(model.getTrenutniKorisnik().lozinkaProperty());
-
         userList.setItems(model.getKorisnici());
 
         userList.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Korisnik>() {
@@ -46,12 +37,8 @@ public class Controller {
                 model.setTrenutniKorisnik(t1);
             }
         });
-
-
-
+        
     }
-
-
     public void dodajUsera(ActionEvent actionEvent) {
 
     }

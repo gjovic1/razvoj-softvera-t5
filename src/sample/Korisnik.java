@@ -9,6 +9,10 @@ public class Korisnik {
     private SimpleStringProperty username = new SimpleStringProperty("");
     private SimpleStringProperty lozinka = new SimpleStringProperty("");
 
+    public Korisnik() {
+
+    }
+
     public Korisnik(String ime, String prezime, String email, String username, String lozinka)
     {
         this.ime = new SimpleStringProperty(ime);
